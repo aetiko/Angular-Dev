@@ -1,0 +1,25 @@
+<!-- Setting up the html table -->
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Midle Name</th>
+      <th>Last Name</th>
+      <th>Relationship</th>
+      <th>Age</th>
+      <th>Religion</th>
+      
+    </tr>
+  </thead>
+
+  <tbody> 
+      <tr *ngFor = "let tempAneNuclearFamily of aneNuclearFamilyList">
+          <td> {{tempAneNuclearFamily.firstName}}</td>
+          <td> {{tempAneNuclearFamily.middleName}}</td>
+          <td> {{tempAneNuclearFamily.lastName}}</td>
+          <td> {{tempAneNuclearFamily.relationshipToAyoola}}</td>
+          <td> {{tempAneNuclearFamily.age}}</td>
+          <td> {{tempAneNuclearFamily.religion}}</td>
+      </tr>
+  </tbody>
+</table>
