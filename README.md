@@ -24,7 +24,7 @@
  * - retrieving data from a server, performing a calculation, validation etc
  * 
  * Module - a collection of related components, directives, services etc
- 
+
 # Installation 
 - Visual studio code
 - node 
@@ -48,3 +48,7 @@ And select option : A
 
 # Run the code 
 node <filename>.ts
+
+
+# Creating a new project
+> npm install -g @angular/cli
