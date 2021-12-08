@@ -8,18 +8,23 @@
       <th>Relationship</th>
       <th>Age</th>
       <th>Religion</th>
-      
+      <th>Net worth</th>
+      <th>Is older than 40?</th>
     </tr>
   </thead>
-
-  <tbody> 
-      <tr *ngFor = "let tempAneNuclearFamily of aneNuclearFamilyList">
-          <td> {{tempAneNuclearFamily.firstName}}</td>
-          <td> {{tempAneNuclearFamily.middleName}}</td>
-          <td> {{tempAneNuclearFamily.lastName}}</td>
-          <td> {{tempAneNuclearFamily.relationshipToAyoola}}</td>
-          <td> {{tempAneNuclearFamily.age}}</td>
-          <td> {{tempAneNuclearFamily.religion}}</td>
-      </tr>
+  <tbody>
+    <tr *ngFor="let tempAneNuclearFamily of aneNuclearFamilyList" [ngClass]="{'highlight': tempAneNuclearFamily.age >= 40}">
+      <td>{{ tempAneNuclearFamily.firstName }}</td>
+      <td>{{ tempAneNuclearFamily.middleName }}</td>
+      <td>{{ tempAneNuclearFamily.lastName }}</td>
+      <td>{{ tempAneNuclearFamily.relationshipToAyoola }}</td>
+      <td>{{ tempAneNuclearFamily.age }}</td>
+      <td>{{ tempAneNuclearFamily.religion }}</td>
+      <td>{{ tempAneNuclearFamily.netWorth | currency:'USD'}}</td>
+      <td>
+        <div *ngIf="tempAneNuclearFamily.age >= 40; else myElseBlock">Yes</div>
+        <ng-template #myElseBlock>No</ng-template>
+      </td>
+    </tr>
   </tbody>
 </table>

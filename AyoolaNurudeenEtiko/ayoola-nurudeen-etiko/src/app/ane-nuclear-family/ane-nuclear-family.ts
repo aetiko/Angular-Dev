@@ -6,5 +6,6 @@ export class AneNuclearFamily {
         public relationshipToAyoola: string,
         public age: number,
         public religion: string,
+        public netWorth: number
         ){}
 }
